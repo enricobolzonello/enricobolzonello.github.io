@@ -1,0 +1,26 @@
+lang: en
+
+home:
+  welcome: Hi, I'm Enrico
+  description: 
+
+menu_links: []
+extra_head: []
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: Blog name
+  description: General description of the blog
+  title: "=title"
+  image: "=image"
+  twitter: "@username"
+  lang: en
+
+sections:
+  - name: archive
+  - name: about
+  - name: projects
+
+socials:
+  - url:
+    icon: 

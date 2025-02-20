@@ -1,0 +1,15 @@
+<!doctype html>
+
+<html lang="{{ it.lang }}">
+  {{ include "./head.vto" }}
+  <body>
+
+    {{ include "./header.vto" }}
+
+    <main class="{{ it.bodyClass }}">
+      {{ content }}
+    </main>
+
+    <!-- Current page: {{ url }} -->
+  </body>
+</html>

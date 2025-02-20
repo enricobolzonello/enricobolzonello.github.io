@@ -1,0 +1,5 @@
+type: project
+layout: layouts/project.vto
+
+metas:
+  title: "=title"

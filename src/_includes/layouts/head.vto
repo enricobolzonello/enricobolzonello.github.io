@@ -1,0 +1,46 @@
+<head>
+    <!-- General properties -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+
+    <!-- Page-specific -->
+    <title>{{ it.title || metas.title }} - {{ metas.site }}</title>
+    <meta name="author" content="Enrico Bolzonello" />
+    <meta name="description" content="{{ description }}"/>
+
+    <!-- OpenGraph properties -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="enricobolzonello.github.io" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:url" content="{{  url |> url(true) }}" />
+    <meta property="og:description" content="{{ description }}" />
+
+    {{ if cover }}
+    <meta property="og:image" content="{{ cover |> url(true) }}"/>
+    {{ else }}
+    <meta property="og:image" content="{{ "/images/og/og-wide.jpg" |> url(true) }}"/>
+    <meta property="og:image:height" content="400"/>
+    <meta property="og:image:width" content="800"/>
+    {{ /if }}
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props"/>
+    <link rel="stylesheet" href="https://unpkg.com/open-props/easings.min.css"/>
+
+
+    <!-- RSS Feeds -->
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" 
+        title="{{ metas.site }}" >
+    <link rel="alternate" href="/feed.json" type="application/json" 
+        title="{{ metas.site }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="canonical" href="{{ url |> url(true) }}">
+    <script src="/js/main.js" type="module"></script>
+    {{ it.extra_head?.join("\n") }}
+</head>

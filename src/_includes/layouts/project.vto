@@ -1,0 +1,48 @@
+---
+layout: layouts/base.vto
+bodyClass: body-post
+---
+<article class="project-single" data-pagefind-body data-title="{{ title }}" data-pagefind-index-attrs="data-title">
+    <header class="project-header">
+        <p class="project-category">
+            {{ for c of category }}
+                {{ c }}
+            {{ /for }}
+        </p>
+        <h1 class="project-title entry-hint-parent">
+            {{ title }}
+        </h1>
+        {{ if description }}
+        <div class="project-description">
+            {{ description }}
+        </div>
+        {{/if}}
+
+        <div class="project-meta">
+            <div class="project-details">
+                <div class="project-client">
+                    <h3>Client</h3>
+                    <p>{{ client }}</p>
+                </div>
+                <div class="project-technologies">
+                    <h3>Technologies</h3>
+                    <p>
+                        {{for tech of technologies }}
+                            {{ tech }}
+                        {{/for}}
+                    </p>
+                </div>
+            </div>
+
+            {{if link}}
+            <a href="{{ link }}" class="project-link">Open Project →</a>
+            {{/if}}
+        </div>
+    </header>
+
+    {{ if content }}
+    <div class="project-content">
+        {{ content }}
+    </div>
+    {{/if}}
+</article>

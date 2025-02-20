@@ -1,0 +1,23 @@
+---
+layout: layouts/page.vto
+section: projects
+title: Projects
+subtitle: A collection of personal & university projects with different tools and scopes, but all made with 💜.
+url: /projects/
+menu:
+  visible: true
+  order: 2
+---
+
+<div class="grid-container">
+  {{ for page of search.pages("type=project", "year=desc") }}
+    <a href="/{{ page.sourcePath }}" />
+    <div class="item-content">
+      <div class="item-text">
+        <h2 class="item-title">{{ page.title }}</h2>
+        <p class="item-description">{{ page.summary }}</p>
+      </div>
+    </div>
+  </a>
+  {{/for}}
+</div>
