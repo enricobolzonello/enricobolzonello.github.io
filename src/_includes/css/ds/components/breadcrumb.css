@@ -4,19 +4,16 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    text-decoration: underline;
-    text-decoration-style: dotted;
+    justify-content: center;
+    color: var(--color-primary-highlight);
   
     & > li::after {
       content: "/";
       display: inline-block;
       padding: 0 0.5em;
     }
-    & a {
-      text-decoration: none;
-  
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
+
+.breadcrumb a {
+  text-decoration: dotted;
+}

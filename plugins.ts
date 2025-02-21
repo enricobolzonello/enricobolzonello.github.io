@@ -18,7 +18,7 @@ import { alert } from "npm:@mdit/plugin-alert@0.14.0";
 import katex from "lume/plugins/katex.ts";
 import icons from "lume/plugins/icons.ts";
 import inline from "lume/plugins/inline.ts";
-import highlight from "lume/plugins/code_highlight.ts";
+import codeHighlight from "lume/plugins/code_highlight.ts";
 
 
 import "lume/types.ts";
@@ -65,12 +65,7 @@ export default function (userOptions?: Options) {
       .use(sitemap())
       .use(katex())
       .use(feed(options.feed))
-      .use(highlight({
-        theme: {
-          name: "atom-one-dark",
-          path: "/styles.css",
-        },
-      }))
+      .use(codeHighlight())
       .use(icons())
       .use(inline())
       .copy("static", "./")

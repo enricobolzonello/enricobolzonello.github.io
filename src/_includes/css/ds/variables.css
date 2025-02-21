@@ -1,18 +1,20 @@
 :root {
     /* Light colors */
     color-scheme: light;
-    --color-base: hsl(220, 20%, 5%);
-    --color-text: hsl(220, 20%, 20%);
-    --color-dim: hsl(220, 20%, 40%);
+    --color-base: var(--color-primary);
+    --color-text: hsl(201, 7%, 38%);
+    --color-dim: hsl(200, 8%, 15%);
     --color-link: var(--color-primary);
     --color-link-hover: var(--color-primary-highlight);
-    --color-line: hsl(220, 20%, 90%);
-    --color-background: hsl(220, 20%, 100%);
-    --color-highlight: hsl(220, 20%, 97%);
+    --color-line: rgb(222 215 189);
+    --color-background:hsl(41, 76%, 95%);
+    --color-highlight: hsl(220, 25%, 97%);
+    --color-accent: rgb(162 235 209);
   
     /* Brand colors */
-    --color-primary: hsl(0deg, 50%, 50%);
-    --color-primary-highlight: hsl(0deg, 50%, 40%);
+    --color-secondary: hsl(54, 96%, 69%);
+    --color-primary: hsl(68, 46%, 10%);
+    --color-primary-highlight: rgb(125 106 4);
   
     /* Code colors */
     --code-text: var(--color-base);
@@ -24,7 +26,8 @@
     --code-inserted: hsl(80, 90%, 30%);
     --code-deleted: hsl(327, 90%, 30%);
     --code-border: var(--color-line);
-    --code-background: var(--color-highlight);
+    --code-background: white;
+    --code-background2: var(--color-accent);
     --code-background-selection: #b3d4fc;
   
     /* Fonts */
@@ -80,16 +83,16 @@
   /* Dark colors */
   [data-theme="dark"] {
     color-scheme: dark;
-    --color-base: hsl(220, 20%, 100%);
+    --color-base: hsl(216, 19%, 85%);
     --color-text: hsl(220, 20%, 70%);
     --color-dim: hsl(220, 20%, 55%);
   
     --color-line: hsl(220, 20%, 20%);
-    --color-background: hsl(220, 20%, 10%);
+    --color-background: 		hsl(240, 5%, 11%);
     --color-highlight: hsl(220, 20%, 13%);
   
-    --color-primary: hsl(0deg, 88%, 65%);
-    --color-primary-highlight: hsl(0deg, 88%, 70%);
+    --color-primary: 		hsl(279, 72%, 39%);
+    --color-primary-highlight: 		hsl(330, 37%, 48%);
   
     --code-text: var(--color-base);
     --code-comment: hsl(0, 0%, 50%);

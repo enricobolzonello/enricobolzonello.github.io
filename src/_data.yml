@@ -22,7 +22,7 @@ sections:
 
 socials:
   - name: Github
-    url: "github.com/enricobolzonello"
+    url: "https://github.com/enricobolzonello"
     icon: github-logo:bold
   - name: Linkedin
     url: "https://www.linkedin.com/in/enrico-bolzonello/"

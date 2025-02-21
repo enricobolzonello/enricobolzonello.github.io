@@ -26,7 +26,7 @@
   letter-spacing: var(--font-body-spacing);
   margin: 0;
   text-wrap: balance;
-  color: var(--color-dim);
+  color: var(--color-text);
   flex: 3;
 }
 
@@ -44,6 +44,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
 }
 
 .page-social-icon {
