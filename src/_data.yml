@@ -2,18 +2,17 @@ lang: en
 
 home:
   welcome: Hi, I'm Enrico
-  description: 
+  description: I am a Software engineer living in Italy. Currently working on my master's thesis focusing on an algorithm for the kNN problem. I (try to) maintain this blog mostly for a self-exercise
 
 menu_links: []
 extra_head: []
 
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
-  site: Blog name
-  description: General description of the blog
+  site: Enrico Bolzonello
+  description: Enrico personal website and blog
   title: "=title"
   image: "=image"
-  twitter: "@username"
   lang: en
 
 sections:
@@ -22,5 +21,12 @@ sections:
   - name: projects
 
 socials:
-  - url:
-    icon: 
+  - name: Github
+    url: "github.com/enricobolzonello"
+    icon: github-logo:bold
+  - name: Linkedin
+    url: "https://www.linkedin.com/in/enrico-bolzonello/"
+    icon: linkedin-logo:bold
+  - name: Mail
+    url: "mailto:enribolzonello@gmail.com"
+    icon: envelope:bold

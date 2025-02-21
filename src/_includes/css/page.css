@@ -14,12 +14,42 @@
   color: var(--color-base);
 }
 
+.page-subheader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
 .page-description {
   font: var(--font-body-bold);
   letter-spacing: var(--font-body-spacing);
   margin: 0;
   text-wrap: balance;
   color: var(--color-dim);
+  flex: 3;
+}
+
+.page-social-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 1rem;
+  margin-left: 2rem;
+  gap: 0.5rem;
+}
+
+.page-social-div a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-social-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
 }
 
 .page-navigation {

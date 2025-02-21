@@ -1,9 +1,10 @@
 .postList {
+  margin-top: var(--row-gap-medium);
   list-style: none;
   padding: 0;
 
   & article.post + article.post {
-    margin-top: var(--row-gap-medium);
+    margin-top: var(--row-gap-small);
   }
   & li.post + li.post {
     margin-top: var(--row-gap-small);

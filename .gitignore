@@ -3,3 +3,5 @@ src/uploads
 _site
 _bin
 deno.lock
+
+.DS_Store

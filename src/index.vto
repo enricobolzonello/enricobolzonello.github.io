@@ -6,10 +6,24 @@ title: Home
 
 <div class="page-header">
   <h1 class="page-title">{{ home.welcome }}</h1>
-  <p class="page-description">{{ home.description}}</p>
 
-  
+  <div class="page-subheader">
+    <p class="page-description">{{ home.description}}</p>
+
+    <div class="page-social-div">
+      {{ for social of socials}}
+        <a href="{{social.url}}">
+          <img class="page-social-icon" src="{{ social.icon |> icon("phosphor") }}" inline />
+          {{ social.name }}
+        </a>
+      {{ /for }}
+    </div>
+  </div>
+
+  <hr>
 </div>
+
+<div class="search" id="search"></div>
 
 <section class="postList">
   {{ for post of search.pages("type=post", "date=desc", 3) }}
@@ -28,18 +42,6 @@ title: Home
         readingInfo: post.readingInfo
         } }}
     </header>
-
-    <div class="post-excerpt body">
-      {{ post.excerpt |> md }}
-    </div>
-
-    <a href="{{ post.url }}" class="post-link">
-      {{ i18n.nav.continue_reading }}
-    </a>
   </article>
 {{ /for }}
 </section>
-
-<hr>
-
-<p>{{ i18n.nav.archive }}</p>
