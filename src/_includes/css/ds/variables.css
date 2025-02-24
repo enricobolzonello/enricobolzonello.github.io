@@ -83,16 +83,20 @@
   /* Dark colors */
   [data-theme="dark"] {
     color-scheme: dark;
-    --color-base: hsl(216, 19%, 85%);
-    --color-text: hsl(220, 20%, 70%);
-    --color-dim: hsl(220, 20%, 55%);
+    --color-base: var(--color-primary);
+    --color-text:hsl(220, 25%, 97%);
+    --color-dim: hsl(221, 26%, 75%);
+    --color-link: var(--color-primary);
+    --color-link-hover: var(--color-primary-highlight);
+    --color-line: hsl(221, 26%, 85%);
+    --color-background:hsl(342, 21%, 12%);
+    --color-highlight: hsl(162, 21%, 13%);
+    --color-accent: #1b1f59;
   
-    --color-line: hsl(220, 20%, 20%);
-    --color-background: 		hsl(240, 5%, 11%);
-    --color-highlight: hsl(220, 20%, 13%);
-  
-    --color-primary: 		hsl(279, 72%, 39%);
-    --color-primary-highlight: 		hsl(330, 37%, 48%);
+    /* Brand colors */
+    --color-secondary: hsl(54, 96%, 69%);
+    --color-primary:hsl(335, 86%, 59%);
+    --color-primary-highlight: #fc89ad;
   
     --code-text: var(--color-base);
     --code-comment: hsl(0, 0%, 50%);
@@ -103,6 +107,6 @@
     --code-inserted: hsl(75, 20%, 50%);
     --code-deleted: hsl(15, 60%, 55%);
     --code-border: var(--color-line);
-    --code-background: var(--color-highlight);
+    --code-background: #0d1117;
     --code-background-selection: hsla(0, 0%, 93%, 0.15);
   }

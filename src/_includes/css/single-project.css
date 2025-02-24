@@ -50,8 +50,8 @@
 }
 
 .project-link:hover {
-    text-decoration-style: dotted;
     background-color: var(--color-secondary);
     color: var(--color-primary-highlight);
     text-decoration: underline dotted;
+    text-decoration-color: var(--color-primary-highlight);
 }
