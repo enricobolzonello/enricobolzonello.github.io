@@ -21,7 +21,7 @@ The count of nodes and edges after cleanup is 5462 nodes and 10496 edges.
 
 The initial coverage of each category is the following:
 
-| **Category**   | **POIs** | **Covered nodes** | **Coverage %** |
+| Category   | POIs | Covered nodes | Coverage % |
 |----------------|--------------------|-----------------------------|----------------------------|
 | Education      | 94                 | 3124                        | 57.13%                    |
 | Bank          | 43                 | 1713                        | 31.31%                    |

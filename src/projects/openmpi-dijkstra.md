@@ -6,13 +6,13 @@ category: ["Parallel Programming"]
 client: "University"
 technologies: ["C", "OpenMPI", "Make"]
 icon: "E04A"
-description: "Dijkstra’s algorithm is undoubtedly the most famous algorithm for solving the Single-Source Shortest Path (SSSP) problem with weighted graphs. The problem formulation is as follows: given a graph G = (V, E), we want to find a shortest path from a given vertex s ∈ V to each vertex v ∈ V [1]. In other words, we want to identify all minimum costs simple paths between the source and all other vertices.
+description: "Dijkstra’s algorithm is undoubtedly the most famous algorithm for solving the Single-Source Shortest Path (SSSP) problem with weighted graphs. The problem formulation is as follows: given a graph G = (V, E), we want to find a shortest path from a given vertex s ∈ V to each vertex v ∈ V. In other words, we want to identify all minimum costs simple paths between the source and all other vertices.
 This problem holds significant real-world relevance, finding application across various sectors, for instance in navigation systems, to help users navigate efficiently between two locations, or in routing protocols, to determine the best path for data packets to travel through a network. Efficiently addressing the Single-Source Shortest Path (SSSP) problem is vital, and the application of parallel computing has the potential to provide valuable assistance in this regard. "
 link: "https://github.com/enricobolzonello/OpenMPI-Dijkstra/tree/main"
 ---
 
 ## Approach for Parallelization
-Before discussing the parallel implementation, it's important to highlight that the sequential algorithm in use is not optimized to its fullest potential. Specifically, the implemented \\(O(n^2)\\) version, as detailed in \cite{fischetti}, contrasts with the more efficient \\(O(n\log n)\\) version employing a heap-based priority queue. This choice was made for two reasons: 
+Before discussing the parallel implementation, it's important to highlight that the sequential algorithm in use is not optimized to its fullest potential. Specifically, the implemented \\(O(n^2)\\) version [^1], contrasts with the more efficient \\(O(n\log n)\\) version employing a heap-based priority queue. This choice was made for two reasons: 
 - dependency from external sources. The aim was to avoid relying on any external dependencies apart from OpenMPI, and the prospect of implementing a min-heap was firmly ruled out.
 - ease of parallelization. 
 
@@ -57,7 +57,7 @@ For the first experiment, \\(p\\) is fixed to \\(0.5\\) and the results in Table
 
 As we can see in the table, the speed-up tends to increase as the number of processors and size of the graph increases. It is interesting to note the fact that with \\(2\\) processors the algorithm performs always worst than the sequential algorithm. In all other cases, the speed-up tells us that the use of more processors slightly improves the run-time compared to the sequential algorithm, but not of a factor of \\(p\\) as the aim was. To better understand the cause of this results, let's analyze the Computing over Communication ratio in the following table with \\(n=100\\).
 
-| **processors**      | **2**    | **5**    | **10**   |
+| processors      | 2    | 5    | 10   |
 |---------------------|----------|----------|----------|
 | communication total | 0,000219 | 0,00059  | 0,000516 |
 | execution           | 0,000263 | 0,000901 | 0,00113  |
@@ -69,7 +69,7 @@ For simplicity, the execution time also includes the *Allreduce* operation insid
 ### Constant n, different p
 Fixing n=5000 and varying p, the following results are obtained.
 
-| **p** | **filename** | **time sequential** | **time 2 processors** | **time 5 processors** | **time 10 processors** |
+| p | filename | time sequential | time 2 processors | time 5 processors | time 10 processors |
 |-------|--------------|---------------------|-----------------------|-----------------------|------------------------|
 | 0.1   | random10.txt | 0.214774            | 0.503825              | 0.314247              | 0.268701               |
 | 0.3   | random11.txt | 0.288822            | 0.539787              | 0.319813              | 0.260734               |

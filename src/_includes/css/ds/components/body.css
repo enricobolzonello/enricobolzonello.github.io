@@ -40,8 +40,8 @@
       border: solid 1px var(--color-line);
     }
     th {
-      background: var(--color-highlight);
-      color: var(--color-base);
+      background: var(--color-primary);
+      color: var(--color-highlight);
     }
     th, td {
       padding: 0.2em 1em;
