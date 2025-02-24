@@ -3,13 +3,13 @@ layout: layouts/base.vto
 bodyClass: body-post
 ---
 <article class="project-single" data-pagefind-body data-title="{{ title }}" data-pagefind-index-attrs="data-title">
-    <header class="project-header">
+    <header class="post-header">
         <p class="project-category">
             {{ for c of category }}
                 {{ c }}
             {{ /for }}
         </p>
-        <h1 class="project-title entry-hint-parent">
+        <h1 class="post-title">
             {{ title }}
         </h1>
         {{ if description }}
@@ -19,30 +19,40 @@ bodyClass: body-post
         {{/if}}
 
         <div class="project-meta">
-            <div class="project-details">
-                <div class="project-client">
-                    <h3>Client</h3>
-                    <p>{{ client }}</p>
-                </div>
-                <div class="project-technologies">
-                    <h3>Technologies</h3>
-                    <p>
-                        {{for tech of technologies }}
-                            {{ tech }}
-                        {{/for}}
-                    </p>
-                </div>
+            <div class="project-client">
+                <h3>Client</h3>
+                <p>{{ client }}</p>
             </div>
-
+            <div class="project-technologies">
+                <h3>Technologies</h3>
+                {{for tech of technologies }}
+                    <p class="badge">
+                        {{ tech }}
+                    </p>
+                {{/for}}
+            </div>
             {{if link}}
-            <a href="{{ link }}" class="project-link">Open Project →</a>
+                <a href="{{ link }}" class="project-link">Open Project →</a>
             {{/if}}
         </div>
     </header>
 
     {{ if content }}
-    <div class="project-content">
+    <div class="post-body body">
         {{ content }}
     </div>
     {{/if}}
+
+    {{ if it.footnotes.length }}
+  <aside role="note" class="footnotes">
+    <dl>
+      {{ for note of footnotes }}
+      <div id={{ note.id }} class="footnote">
+        <dt><a href="#{{ note.refId }}">{{ note.label }}</a></dt>
+        <dd>{{ note.content }}</dd>
+      </div>
+      {{ /for }}
+    </dl>
+  </aside>
+  {{ /if }}
 </article>

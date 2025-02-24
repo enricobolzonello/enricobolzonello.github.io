@@ -1,0 +1,57 @@
+.project-title {
+    margin-bottom: 2px;
+    font-size: 40px;
+}
+
+.project-category {
+    font-size: 1rem;
+    background: var(--accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.5rem;
+}
+
+.project-description {
+    color: var(--secondary);
+    margin-top: var(--row-gap-xsmall);
+    margin-bottom: var(--row-gap-small);
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+.project-client,
+.project-technologies {
+    max-width: 50%;
+}
+
+.project-client h3,
+.project-technologies h3 {
+    font: var(--font-ui-bold);
+    margin: 0 0 0 0;
+    margin-bottom: 0.5rem;
+}
+
+.project-client p,
+.project-technologies p {
+    margin: 0 0 0 0;
+}
+
+.project-link {
+    font: var(--font-ui-bold);
+    padding: 0.75rem;
+    border-radius: 50px;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration-style: dotted;
+    background-color: var(--color-secondary);
+    color: var(--color-primary-highlight);
+    text-decoration: underline dotted;
+}

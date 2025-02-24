@@ -1,0 +1,68 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about-left {
+    flex: 2;
+}
+
+.about-right {
+    flex: 3;
+    padding-left: 2rem;
+}
+
+.experience-item {
+    border-left: 0.2rem solid var(--color-primary);
+    padding-bottom: 1.5rem;
+    padding-left: 0.25rem;
+}
+
+.experience-item h3 {
+    margin: 0 0 0 0;
+    font: var(--font-ui-bold);
+    color: var(--color-primary);
+}
+
+.experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-meta p {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--color-text);
+    margin: 0 0 0 0;
+}
+
+.experience-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    text-align: center;
+}
+
+.experience-description {
+    margin: 0 0 0 0;
+    padding-left: 1rem;
+}
+
+.experience-tags {
+    padding-left: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.experience-tags p {
+    margin: 0 0 0 0;
+}

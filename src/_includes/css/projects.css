@@ -1,0 +1,15 @@
+.project-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font: var(--font-title);
+    margin-bottom: 0.5rem;
+    text-decoration: underline dotted;
+  }
+  
+  .project-list-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    cursor: pointer;
+  }

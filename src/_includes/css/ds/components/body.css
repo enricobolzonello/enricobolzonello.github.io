@@ -28,7 +28,7 @@
       padding-bottom: 0.2em;
     }
   
-    h1, h2, :not(pre) > code, b, strong {
+    h1, h2, :not(pre, blockquote) > code, b, strong {
       color: var(--color-base);
     }
   

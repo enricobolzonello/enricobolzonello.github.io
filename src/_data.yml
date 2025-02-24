@@ -30,3 +30,27 @@ socials:
   - name: Mail
     url: "mailto:enribolzonello@gmail.com"
     icon: envelope:bold
+
+experience:
+  - position: "Research intern (Thesis)"
+    firm: "Unipd"
+    location: "Padua, It"
+    period: "Oct 2024 - Mar 2025"
+    description: Designing and implementing an LSH-based algorithm to solve the k-Nearest Neighbor problem, ensuring theoretical guarantees for solution quality and mitigating variability in hit rates caused by the probabilistic nature of LSH functions
+    tags: ["Rust", "Python", "SQL", "Git"]
+  - position: "Software Engineer intern"
+    firm: "Unox"
+    location: "Padua, It"
+    period: "Jul 2024 - Oct 2024"
+    description: Collaborated with a five-person team to develop a custom renderer for React Native that runs on an STM board, while also streamlining and unifying the product development process.
+    tags: ["Rust", "NodeJS", "React Native", "Docker", "Git"]
+
+education:
+  - degree: "MSc Computer Engineering"
+    school: "Unipd"
+    location: "Padua, It"
+    period: "Sep 2022 - Mar 2025"
+  - degree: "BSc Computer Engineering"
+    school: "Unipd"
+    location: "Padua, It"
+    period: "Sep 2019 - Sep 2022"
