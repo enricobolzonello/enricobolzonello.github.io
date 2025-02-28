@@ -1,12 +1,12 @@
-<header class="navheader">
-    <div>
+<header class="navheader" role="banner">
+      <div class="navbar-logo">
         <h1><a href="/" class="navbar-home">Enrico Bolzonello</a>&nbsp</h1>
         {{if section }}<h2><a class="breadcrumb" href="/{{ section }}">{{ section }} </a></h2>{{/if}}
         {{if subsection }}<h3><a class="breadcrumb" href="/{{ section }}/{{ subsection }}">{{ subsection }}</a></h3>{{/if}}
-    </div>
-
-    <nav class="navbar">
-        <ul class="navbar-links">
+      </div>
+      <burger-menu max-width="600">
+        <nav class="navigation" aria-label="primary">
+          <ul role="list">
             {{ for s of sections }}
                 {{ if !s.hidden }}
                     <li {{if s.name == section }} section-active{{/if}}" >
@@ -101,6 +101,6 @@
                 </button>
             </li>
         </ul>
-    </nav>
-
+        </nav>
+      </burger-menu>
 </header>
