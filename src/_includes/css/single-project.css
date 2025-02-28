@@ -20,9 +20,10 @@
 .project-meta {
     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
+/* On larger screens, both sections take 50% width */
 .project-client,
 .project-technologies {
     max-width: 50%;
@@ -31,13 +32,13 @@
 .project-client h3,
 .project-technologies h3 {
     font: var(--font-ui-bold);
-    margin: 0 0 0 0;
+    margin: 0;
     margin-bottom: 0.5rem;
 }
 
 .project-client p,
 .project-technologies p {
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
 .project-link {
@@ -54,4 +55,26 @@
     color: var(--color-primary-highlight);
     text-decoration: underline dotted;
     text-decoration-color: var(--color-primary-highlight);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .project-meta {
+        flex-wrap: wrap; /* allow items to wrap to new lines */
+    }
+    /* Place client and technologies on one row */
+    .project-client {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+    .project-technologies {
+        flex: 0 0 66.67%;
+        max-width: 66.67%;
+    }
+    /* Make the project link take the full width and center its content */
+    .project-link {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
 }

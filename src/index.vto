@@ -14,7 +14,7 @@ title: Home
       {{ for social of socials}}
         <a href="{{social.url}}">
           <img class="page-social-icon" src="{{ social.icon |> icon("phosphor") }}" inline />
-          {{ social.name }}
+            <span>{{ social.name }}</span>
         </a>
       {{ /for }}
     </div>

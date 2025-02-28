@@ -46,6 +46,32 @@
   text-decoration: none;
 }
 
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .page-subheader {
+    flex-direction: column;
+  }
+
+  .page-description {
+    flex: auto;
+  }
+
+  .page-social-div {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-top: 2rem; /* Space between description and social icons */
+    gap: 3rem;
+  }
+
+  /* Hide text inside social links */
+  .page-social-div a span {
+    display: none;
+  }
+}
+
+
 .page-social-icon {
   width: 2.25rem;
   height: 2.25rem;

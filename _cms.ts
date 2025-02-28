@@ -140,36 +140,45 @@ cms.collection(
 );
 
 cms.collection(
-  "pages: Additional pages, like about, contact, etc.",
-  "src:pages/*.md",
+  "projects: Projects",
+  "src:projects/*.md",
   [
-    {
-      name: "layout",
-      type: "hidden",
-      value: "layouts/page.vto",
-    },
-    {
-      name: "title",
-      type: "text",
-      label: "Title",
-    },
+    "title: text",
     url,
     {
-      name: "menu",
-      type: "object",
-      label: "Whether to include in the menu",
-      fields: [
-        {
-          name: "visible",
-          type: "checkbox",
-          label: "Show in menu",
-        },
-        {
-          name: "order",
-          type: "number",
-          label: "Order",
-        },
-      ],
+      name: "draft",
+      label: "Draft",
+      type: "checkbox",
+      description: "If checked, the project will not be published.",
+    },
+    {
+      name: "year",
+      type: "datetime",
+    },
+    {
+      name: "category",
+      type: "list",
+    },
+    {
+      name: "client",
+      type: "text",
+    },
+    {
+      name: "technologies",
+      type: "list",
+    },
+    {
+      name: "icon",
+      type: "text",
+      label: "Openmoji identifier",
+    },
+    {
+      name: "description",
+      type: "text",
+    },
+    {
+      name: "link",
+      type: "text",
     },
     {
       name: "extra_head",

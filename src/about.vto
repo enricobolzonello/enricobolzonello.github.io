@@ -9,54 +9,49 @@ menu:
 ---
 
 <div class="about">
-  <div class="about-left">
-    <div>
-      <h2>Description</h2>
-      <p>Something</p>
-    </div>
-    <div>
-      <h2>Favourite Album</h2>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7ycBtnsMtyVbbwTfJwRjSP?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+  <div class="description">
+    <h2>Description</h2>
+    <p>Something</p>
   </div>
-
-  <div class="about-right">
-    <div class="experience">
-      <h2>Experience</h2>
-      {{ for e of experience}}
-        <div class="experience-item">
-          <h3>&nbsp{{e.position}}</h3>
-          <div class="experience-meta"> 
-            <p><img class="experience-icon" src="{{ "briefcase" |> icon("phosphor") }}" inline />{{e.firm}}</p>
-            <p><img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" inline />{{e.location}}</p>
-            <p><img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" inline />{{e.period}}</p>
-          </div>
-          <p class="experience-description">
-            {{e.description}}
+  
+  <div class="experience">
+    <h2>Experience</h2>
+    {{ for e of experience }}
+      <div class="experience-item">
+        <h3>&nbsp;{{ e.position }}</h3>
+        <div class="experience-meta"> 
+          <p>
+            <img class="experience-icon" src="{{ "briefcase" |> icon("phosphor") }}" inline />
+            {{ e.firm }}
           </p>
-          <div class="experience-tags">
+          <p>
+            <img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" inline />
+            {{ e.location }}
+          </p>
+          <p>
+            <img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" inline />
+            {{ e.period }}
+          </p>
+        </div>
+        <p class="experience-description">
+          {{ e.description }}
+        </p>
+        <div class="experience-tags">
           {{ for tag of e.tags }}
             <p class="badge">{{ tag }}</p>
           {{ /for }}
         </div>
-        </div>
-      {{ /for }}
-    </div>
-    <div class="experience">
-      <h2>Education</h2>
-      {{ for e of education}}
-        <div class="experience-item">
-          <h3>&nbsp{{e.degree}}</h3>
-          <div class="experience-meta"> 
-            <p><img class="experience-icon" src="{{ "graduation-cap" |> icon("phosphor") }}" inline />{{e.school}}</p>
-            <p><img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" inline />{{e.location}}</p>
-            <p><img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" inline />{{e.period}}</p>
-          </div>
-          <p class="experience-description">
-            {{e.description}}
-          </p>
-        </div>
-      {{ /for }}
-    </div>
+      </div>
+    {{ /for }}
+  </div>
+  
+  <div class="album">
+    <h2>Favourite Album</h2>
+    <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/7ycBtnsMtyVbbwTfJwRjSP?utm_source=generator" 
+            width="100%" height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+    </iframe>
   </div>
 </div>
