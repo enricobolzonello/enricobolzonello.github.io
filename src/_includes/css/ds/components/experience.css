@@ -10,21 +10,26 @@
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-        "description experience"
-        "album       experience";
     }
   
     .description {
-      grid-area: description;
-    }
-  
-    .experience {
-      grid-area: experience;
+      grid-column: 1;
+      grid-row: 1;
     }
   
     .album {
-      grid-area: album;
+      grid-column: 1;
+      grid-row: 2;
+    }
+  
+    .experience {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  
+    .education {
+      grid-column: 2;
+      grid-row: 2;
     }
   }
   

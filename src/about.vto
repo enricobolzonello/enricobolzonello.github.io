@@ -11,7 +11,18 @@ menu:
 <div class="about">
   <div class="description">
     <h2>Description</h2>
-    <p>Something</p>
+    <p>
+      Recent master's graduate in Computer Engineering at the University of Padua, where I pursued a specialization in Big Data computing.
+    </p>
+    <p>
+      I had the pleasure of exploring both the work and research experience, by first doing an internship at Unox, developing a custom renderer in Rust for their products built in NodeJS/React, and then a research opportunity at the University of Padua under the supervision of <a href="https://www.dei.unipd.it/~ceccarello/">prof. Matteo Ceccarello</a>, exploring the k Nearest Neighbor problem and proposing a new algorithm to solve it as efficiently as possible.
+    </p>  
+    <p>
+      Big supporter of Rust. Curious about productivity and note taking methods, I'm currently experimenting <a href="https://enricobolzonello.github.io/notes/ZETA/PERMANENT/Zettelkasten">Zettelkasten</a> mixed with PARA, all in a <a href="https://github.com/DuskWasHere/dusk-obsidian-vault">single Obsidian vault</a>.
+    </p>
+    <p>
+      Currently working on the k Nearest Neighbor algorithm <a href="https://github.com/enricobolzonello/clann">CLANN</a>.
+    </p>
   </div>
   
   <div class="experience">
@@ -44,6 +55,23 @@ menu:
       </div>
     {{ /for }}
   </div>
+
+  <div class="education">
+        <h2>Education</h2>
+        {{ for e of education}}
+          <div class="experience-item">
+            <h3>&nbsp{{e.degree}}</h3>
+            <div class="experience-meta"> 
+              <p><img class="experience-icon" src="{{ "graduation-cap" |> icon("phosphor") }}" inline />{{e.school}}</p>
+              <p><img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" inline />{{e.location}}</p>
+              <p><img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" inline />{{e.period}}</p>
+            </div>
+            <p class="experience-description">
+              {{e.description}}
+            </p>
+          </div>
+        {{ /for }}
+      </div>
   
   <div class="album">
     <h2>Favourite Album</h2>
