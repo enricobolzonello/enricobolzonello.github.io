@@ -11,7 +11,7 @@ author: Enrico Bolzonello
 In the last year my personal infrastructure has changed a lot from reading lots of books and blogs about individual's productive life. With this post I want to start a bi-annual series to track changes in how my approach to productivity, technology, and knowledge management is shifting, and what’s working (or not), inspired by [Elliot Clowes](http://elliotclowes.com/)'s [I'm Left Handed](https://imlefthanded.com/2025/the-tech-that-powers-my-life-2025-edition/). 
 
 <figure>
-    <img src="/images/posts/tech/2025_setup.png" alt="2025 Setup">
+    <img src="/images/posts/2025/tech/2025_setup.png" alt="2025 Setup">
     <figcaption>2025 setup</figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ As keyboard I recently switched to a mechanical one, after years of membrane. I 
 The second most important peripheral, the mouse, is also quite good. It's the Logitech G502, which I got from an Amazon sale for 40 euros back in 2019. It's proving quite durable and effective, but it has one downside, it's wired. For this reason I had to get a KVM switch to use it in both machines. It's not a big deal, even with the additional cables. 
 
 <figure>
-    <img src="/images/posts/tech/2025_keyboard.png" alt="keychron k8 pro">
+    <img src="/images/posts/2025/tech/2025_keyboard.png" alt="keychron k8 pro">
     <figcaption>Keychron K8 Pro with Gateron Pro red switches</figcaption>
 </figure>
 
@@ -71,7 +71,7 @@ For my productive life, I tend to follow the teachings of [How to Take Smart Not
 For tasks, I use the classic [Todoist](https://www.todoist.com/it) synced with Google calendar. I don't have any special configurations for todo lists organization, I'm still experimenting with it. 
 
 <figure>
-    <img src="/images/posts/tech/obsidian_vault.png" alt="obsidian vault">
+    <img src="/images/posts/2025/tech/obsidian_vault.png" alt="obsidian vault">
     <figcaption>Obsidian Vault homepage</figcaption>
 </figure>
 

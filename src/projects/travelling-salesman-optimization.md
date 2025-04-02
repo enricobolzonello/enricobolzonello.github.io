@@ -29,9 +29,9 @@ During the course we explored and implemented the following algorithms:
     - Local Branching
 
 Heuristics perform exceptionally well with 2000 nodes, whereas exact models struggle even with 400 nodes. However, this speed advantage comes with a trade-off: the best metaheuristic (VNS) has a gap of less than 4% from the optimal solution.
-<img src="/images/metaheur.png" alt="Heuristics Results">
+<img src="/images/projects/or2/metaheur.png" alt="Heuristics Results">
 For exact solutions, the best choice, in terms of the time to reach the optimal solution, is Branch&Cut with fractional cuts and a heuristic initial solution.
-<img src="/images/exact2.png" alt="Exact Results">
+<img src="/images/projects/or2/exact2.png" alt="Exact Results">
 Matheuristics are effective when exact models cannot find the optimal solution within a feasible time limit, enabling us to solve instances with more nodes by leveraging the CPLEX mathematical model. The best performing matheuristic is Hard Fixing, though it has a small gap compared to Local Branching.
-<img src="/images/metaheur.png" alt="Meta-Heuristics Results">
+<img src="/images/projects/or2/metaheur.png" alt="Meta-Heuristics Results">
 Further results, including hyper-parameters tuning, can be found in the project report.

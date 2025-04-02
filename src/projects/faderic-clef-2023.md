@@ -27,6 +27,6 @@ The results obtained by our team demonstrated the effectiveness of our approach.
 
 In general, our system achived the best overall performance of all submitted systems, as can be seen in the figure below, excluding the LT dataset, for which there was a submission error. More details on our approach can be found in the <a href="https://ceur-ws.org/Vol-3497/paper-188.pdf">proceedings paper</a> while the full results and more comments for the competition in the <a href="https://ceur-ws.org/Vol-3497/paper-184.pdf">overview paper</a> of the competition.
 <figure>
-    <img src="/images/faderic_results.png" alt="CLEF results">
+    <img src="/images/projects/clef/faderic_results.png" alt="CLEF results">
     <figcaption>Complete runs table for all submissions, our team's submission are highlighted</figcaption>
 </figure>

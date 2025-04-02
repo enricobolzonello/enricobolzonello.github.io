@@ -48,14 +48,14 @@ This algorithm determines how quickly the sequence escapes to infinity for each 
 The values are checked during each iteration to see whether they have reached a critical "escape" condition, or "bailout". If that condition is reached, the calculation is stopped, the pixel is drawn, and the next _x_, _y_ point is examined. For values within the Mandelbrot set, escape will never occur, so a bail condition (in the pseudo code \\(max\\_iteration\\)) should be set.
 
 With this simple algorithm, this is the result:
-<img src="/images/mandelbort_v1.png" alt="Mandelbrot first version">
+<img src="/images/posts/2024/mandelbort_v1.png" alt="Mandelbrot first version">
 As can be seen, this simple method creates some bands of color, which are not attractive as the smooth colors. The problem is that the number of iterations until escape is an integer, resulting in a stair-step function. It is sufficient to transform the iteration count like this:
 $$
 m = n + 1 - \frac{ \ln\ln|z|}{\ln2}
 $$
 where \\(n\\) is the iteration count found by the naive escape algorithm and \\(|z|\\) its the norm of the complex number at exit.
 The result is the following:
-<img src="/images/mandelbrot_v1_smooth.png" alt="Mandelbrot first version with Smooth Coloring">
+<img src="/images/posts/2024/mandelbrot_v1_smooth.png" alt="Mandelbrot first version with Smooth Coloring">
 
 Much better!
 
