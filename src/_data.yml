@@ -2,7 +2,7 @@ lang: en
 
 home:
   welcome: Hi, I'm Enrico
-  description: I am a Software engineer living in Italy. Currently working on my master's thesis focusing on an algorithm for the kNN problem. I (try to) maintain this blog mostly for a self-exercise
+  description: I am a Software engineer from Italy, currently living in Luxembourg where I work for Amazon. I (try to) maintain this blog mostly for a self-exercise
 
 menu_links: []
 extra_head: []
@@ -32,6 +32,12 @@ socials:
     icon: envelope:bold
 
 experience:
+  - position: "Software Dev Engineer"
+    firm: "Amazon"
+    location: "Luxembourg"
+    period: "Jul 2025 - Current"
+    description: Working on the Capricorn team, part of the Last Mile Delivery Tech (LMDT).
+    tags: ["Java", "Python", "Typescript", "Git"]
   - position: "Research intern (Thesis)"
     firm: "Unipd"
     location: "Padua, It"
