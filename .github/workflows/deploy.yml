@@ -20,6 +20,17 @@ jobs:
       - name: Setup Deno environment
         uses: denoland/setup-deno@v2
 
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install matplotlib plotly pandas numpy bokeh jupyter
+
       - name: Build site
         run: deno task build
 

@@ -3,5 +3,7 @@ src/uploads
 _site
 _bin
 deno.lock
+.quarto
+*.quarto_ipynb
 
 .DS_Store

@@ -1,3 +1,4 @@
+import quarto from "./quarto.ts";
 import date, { Options as DateOptions } from "lume/plugins/date.ts";
 import postcss from "lume/plugins/postcss.ts";
 import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
@@ -10,10 +11,10 @@ import sitemap from "lume/plugins/sitemap.ts";
 import feed, { Options as FeedOptions } from "lume/plugins/feed.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
 import { merge } from "lume/core/utils/object.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.9.0/toc.ts";
-import image from "https://deno.land/x/lume_markdown_plugins@v0.9.0/image.ts";
-import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.9.0/footnotes.ts";
-import { alert } from "npm:@mdit/plugin-alert@0.22.2";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.11.1/toc.ts";
+import image from "https://deno.land/x/lume_markdown_plugins@v0.11.1/image.ts";
+import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.11.1/footnotes.ts";
+import { alert } from "npm:@mdit/plugin-alert@0.22.4";
 import katex from "lume/plugins/katex.ts";
 import icons from "lume/plugins/icons.ts";
 import inline from "lume/plugins/inline.ts";
@@ -48,6 +49,7 @@ export default function (userOptions?: Options) {
 
   return (site: Lume.Site) => {
     site
+      .use(quarto())
       .use(postcss())
       .use(basePath())
       .use(toc())

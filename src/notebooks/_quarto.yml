@@ -1,0 +1,11 @@
+project:
+  output-dir: ../posts/
+
+format:
+  gfm:
+    html-math-method: katex
+    template: _templates/lume.md
+
+execute:
+  warning: false
+  echo: false

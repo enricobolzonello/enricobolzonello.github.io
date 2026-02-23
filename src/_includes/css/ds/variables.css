@@ -7,15 +7,15 @@
     --color-link: var(--color-primary);
     --color-link-hover: var(--color-primary-highlight);
     --color-line: rgb(222 215 189);
-    --color-background:hsl(41, 76%, 95%);
+    --color-background: hsl(41, 76%, 95%);
     --color-highlight: hsl(220, 25%, 97%);
     --color-accent: rgb(162 235 209);
-  
+
     /* Brand colors */
     --color-secondary: hsl(54, 96%, 69%);
     --color-primary: hsl(68, 46%, 10%);
     --color-primary-highlight: rgb(125 106 4);
-  
+
     /* Code colors */
     --code-text: var(--color-base);
     --code-comment: slategray;
@@ -29,43 +29,42 @@
     --code-background: white;
     --code-background2: var(--color-accent);
     --code-background-selection: #b3d4fc;
-  
+
     /* Fonts */
     --font-family-code:
-      Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console",
-      "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
-      "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+        Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+        "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+        "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+        "Courier New", Courier, monospace;
     --font-family-ui: -apple-system, system-ui, sans-serif;
     --font-family-display: var(--font-family-ui);
     --font-bold: 600;
     --font-extra-bold: 700;
-  
+
     --font-code: 0.9em/1.5 var(--font-family-code);
-    --font-display: var(--font-extra-bold) clamp(2rem, 10vw, 4rem)/1 var(
-      --font-family-display
-    );
+    --font-display: var(--font-extra-bold) clamp(2rem, 10vw, 4rem) / 1
+        var(--font-family-display);
     --font-display-spacing: -0.02em;
-    --font-title: var(--font-bold) clamp(1.5rem, 8vw, 2rem)/1.2 var(
-      --font-family-ui
-    );
+    --font-title: var(--font-bold) clamp(1.5rem, 8vw, 2rem) / 1.2
+        var(--font-family-ui);
     --font-title-spacing: -0.015em;
-    --font-body: clamp(1rem, 5vw, 1.125rem)/1.6 var(--font-family-ui);
+    --font-body: clamp(1rem, 5vw, 1.125rem) / 1.6 var(--font-family-ui);
     --font-body-bold: var(--font-bold) var(--font-body);
     --font-body-spacing: 0;
     --font-ui: 1rem/1.4 var(--font-family-ui);
     --font-ui-bold: var(--font-bold) var(--font-ui);
-    --font-small: clamp(0.85rem, 4vw, 0.9rem)/1.4 var(--font-family-ui);
+    --font-small: clamp(0.85rem, 4vw, 0.9rem) / 1.4 var(--font-family-ui);
     --font-small-bold: var(--font-bold) var(--font-small);
-  
+
     /* Space */
     --row-gap-xsmall: 1rem;
     --row-gap-small: 2.5rem;
     --row-gap-medium: 5rem;
-  
+
     /* Other */
     --border-radius: 6px;
     --animation-duration: 0.2s;
-  
+
     /* Pagefind */
     --pagefind-ui-scale: 0.8;
     --pagefind-ui-primary: var(--color-text);
@@ -78,26 +77,26 @@
     --pagefind-ui-image-border-radius: var(--border-radius);
     --pagefind-ui-image-box-ratio: 3 / 2;
     --pagefind-ui-font: var(--font-family-ui);
-  }
-  
-  /* Dark colors */
-  [data-theme="dark"] {
+}
+
+/* Dark colors */
+[data-theme="dark"] {
     color-scheme: dark;
     --color-base: var(--color-primary);
-    --color-text:hsl(220, 25%, 97%);
-    --color-dim: hsl(221, 26%, 75%);
+    --color-text: #d3c6aa;
+    --color-dim: #9da9a0;
     --color-link: var(--color-primary);
     --color-link-hover: var(--color-primary-highlight);
-    --color-line: hsl(221, 26%, 85%);
-    --color-background:hsl(342, 21%, 12%);
-    --color-highlight: hsl(344, 22%, 20%);
-    --color-accent: #1b1f59;
-  
+    --color-line: #374145;
+    --color-background: #272e33;
+    --color-highlight: #414b50;
+    --color-accent: #7fbbb3;
+
     /* Brand colors */
-    --color-secondary: hsl(54, 96%, 69%);
-    --color-primary:hsl(335, 86%, 59%);
-    --color-primary-highlight: #fc89ad;
-  
+    --color-secondary: #dbbc7f;
+    --color-primary: #7fbbb3;
+    --color-primary-highlight: #35a77c;
+
     --code-text: var(--color-base);
     --code-comment: hsl(0, 0%, 50%);
     --code-token-1: hsl(0, 100%, 70%);
@@ -109,4 +108,4 @@
     --code-border: var(--color-line);
     --code-background: #0d1117;
     --code-background-selection: hsla(0, 0%, 93%, 0.15);
-  }
+}
