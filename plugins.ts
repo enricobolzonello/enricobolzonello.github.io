@@ -1,4 +1,3 @@
-import quarto from "./quarto.ts";
 import date, { Options as DateOptions } from "lume/plugins/date.ts";
 import postcss from "lume/plugins/postcss.ts";
 import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
@@ -49,7 +48,6 @@ export default function (userOptions?: Options) {
 
   return (site: Lume.Site) => {
     site
-      .use(quarto())
       .use(postcss())
       .use(basePath())
       .use(toc())
