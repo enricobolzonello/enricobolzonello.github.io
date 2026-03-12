@@ -65,7 +65,9 @@ export default function (userOptions?: Options) {
       .use(resolveUrls())
       .use(slugifyUrls())
       .use(pagefind(options.pagefind))
-      .use(sitemap())
+      .use(sitemap({
+        query: "draft!=true",
+      }))
       .use(katex())
       .use(feed(options.feed))
       .use(codeHighlight())
