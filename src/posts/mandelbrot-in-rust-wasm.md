@@ -7,6 +7,7 @@ tags:
     - "rust" 
     - "wasm"
 author: Enrico Bolzonello
+description: Building an interactive Mandelbrot Set viewer using Rust compiled to WebAssembly, exploring the math behind one of the most visually stunning objects in mathematics.
 ---
 
 Mandelbrot Set is one of the fascinating objects in mathematics, as it has an easy definition but the result is extremely complex. This blog explores it by implementing a viewer in Rust, Wasm and Typescript

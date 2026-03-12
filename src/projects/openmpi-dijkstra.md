@@ -6,8 +6,7 @@ category: ["Parallel Programming"]
 client: "University"
 technologies: ["C", "OpenMPI", "Make"]
 icon: "E04A"
-description: "Dijkstra’s algorithm is undoubtedly the most famous algorithm for solving the Single-Source Shortest Path (SSSP) problem with weighted graphs. The problem formulation is as follows: given a graph G = (V, E), we want to find a shortest path from a given vertex s ∈ V to each vertex v ∈ V. In other words, we want to identify all minimum costs simple paths between the source and all other vertices.
-This problem holds significant real-world relevance, finding application across various sectors, for instance in navigation systems, to help users navigate efficiently between two locations, or in routing protocols, to determine the best path for data packets to travel through a network. Efficiently addressing the Single-Source Shortest Path (SSSP) problem is vital, and the application of parallel computing has the potential to provide valuable assistance in this regard. "
+description: "A parallel implementation of Dijkstra’s Single-Source Shortest Path algorithm using OpenMPI. Explores how to distribute the workload across multiple processes to speed up shortest-path computation on weighted graphs."
 link: "https://github.com/enricobolzonello/OpenMPI-Dijkstra/tree/main"
 ---
 

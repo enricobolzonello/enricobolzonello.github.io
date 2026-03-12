@@ -2,6 +2,7 @@
 layout: layouts/base.vto
 bodyClass: body-home
 title: Home
+description: Personal website and blog of Enrico Bolzonello, software engineer at Amazon. Writing about Rust, algorithms, productivity, and software engineering.
 ---
 
 <div class="page-header">
@@ -13,7 +14,7 @@ title: Home
     <div class="page-social-div">
       {{ for social of socials}}
         <a href="{{social.url}}">
-          <img class="page-social-icon" src="{{ social.icon |> icon("phosphor") }}" inline />
+          <img class="page-social-icon" src="{{ social.icon |> icon("phosphor") }}" alt="{{ social.name }}" inline />
             <span>{{ social.name }}</span>
         </a>
       {{ /for }}

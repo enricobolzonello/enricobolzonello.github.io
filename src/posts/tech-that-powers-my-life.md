@@ -6,6 +6,7 @@ tags:
     - "tech"
     - "updates"
 author: Enrico Bolzonello
+description: A bi-annual snapshot of the hardware, software, and workflows that power my productivity and knowledge management in 2025.
 ---
 
 In the last year my personal infrastructure has changed a lot from reading lots of books and blogs about individual's productive life. With this post I want to start a bi-annual series to track changes in how my approach to productivity, technology, and knowledge management is shifting, and what’s working (or not), inspired by [Elliot Clowes](http://elliotclowes.com/)'s [I'm Left Handed](https://imlefthanded.com/2025/the-tech-that-powers-my-life-2025-edition/). 

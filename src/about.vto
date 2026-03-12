@@ -2,6 +2,7 @@
 layout: layouts/page.vto
 section: About
 title: About Me
+description: Software engineer from Italy, currently at Amazon in Luxembourg. MSc in Computer Engineering from the University of Padua, with experience in Rust, distributed systems, and algorithm research.
 url: /about/
 menu:
   visible: true
@@ -32,15 +33,15 @@ menu:
         <h3>&nbsp;{{ e.position }}</h3>
         <div class="experience-meta">
           <p>
-            <img class="experience-icon" src="{{ "briefcase" |> icon("phosphor") }}" inline />
+            <img class="experience-icon" src="{{ "briefcase" |> icon("phosphor") }}" alt="Company" inline />
             {{ e.firm }}
           </p>
           <p>
-            <img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" inline />
+            <img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" alt="Location" inline />
             {{ e.location }}
           </p>
           <p>
-            <img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" inline />
+            <img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" alt="Period" inline />
             {{ e.period }}
           </p>
         </div>
@@ -62,9 +63,9 @@ menu:
           <div class="experience-item">
             <h3>&nbsp{{e.degree}}</h3>
             <div class="experience-meta">
-              <p><img class="experience-icon" src="{{ "graduation-cap" |> icon("phosphor") }}" inline />{{e.school}}</p>
-              <p><img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" inline />{{e.location}}</p>
-              <p><img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" inline />{{e.period}}</p>
+              <p><img class="experience-icon" src="{{ "graduation-cap" |> icon("phosphor") }}" alt="School" inline />{{e.school}}</p>
+              <p><img class="experience-icon" src="{{ "map-pin" |> icon("phosphor") }}" alt="Location" inline />{{e.location}}</p>
+              <p><img class="experience-icon" src="{{ "calendar" |> icon("phosphor") }}" alt="Period" inline />{{e.period}}</p>
             </div>
             <p class="experience-description">
               {{e.description}}

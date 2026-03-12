@@ -2,6 +2,7 @@
 layout: layouts/page.vto
 section: Projects
 title: Projects
+description: A collection of personal and university projects spanning parallel computing, information retrieval, network analysis, and web development — all built with curiosity.
 subtitle: A collection of personal & university projects with different tools and scopes, but all made with love.
 url: /projects/
 menu:
@@ -13,7 +14,7 @@ menu:
   {{ for page of search.pages("type=project", "year=desc") }}
     <div class="project-list-item">
       <a class="project-list-item" href="{{page.url}}">
-        <img class="project-list-icon" src="{{ page.icon |> icon("openmoji") }}" inline />
+        <img class="project-list-icon" src="{{ page.icon |> icon("openmoji") }}" alt="{{ page.title }}" inline />
         {{ page.title }}
       </a>
     </div>

@@ -5,5 +5,6 @@ _bin
 deno.lock
 .quarto
 *.quarto_ipynb
+*_seo-issues.json
 
 .DS_Store

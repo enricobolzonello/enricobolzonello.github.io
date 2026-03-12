@@ -4,6 +4,7 @@ date: 2025-04-01
 draft: false
 author: "Enrico Bolzonello"
 tags: ["nearest neighbor", "weekly paper"]
+description: An introduction to Nearest Neighbor Search, the algorithm powering recommendation systems and vector databases, with a look at exact and approximate methods.
 ---
 
 Nearest Neighbor Search is an important primitive in different

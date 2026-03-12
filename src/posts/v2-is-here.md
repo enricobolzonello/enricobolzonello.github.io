@@ -5,6 +5,7 @@ draft: false
 tags:
     - "updates"
 author: Enrico Bolzonello
+description: A full redesign of the site with a new tech stack based on Lume and Deno, a fresh look, and renewed motivation to write more.
 ---
 Now I have officially more redesigns than posts. But I feel it was needed. After the initial site creation I didn't have a clue to what to do with it, and it became soon abandoned. The about me page was still empty, and some things didn't feel right. Furthermore, I wasn't fully convinced about the general design. For this reasons I decided to embark in a full redesign, and also a tech switch. It also serves as a new start and new motivation to write more frequently. 
 

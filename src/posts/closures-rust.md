@@ -5,6 +5,7 @@ draft: false
 tags:
     - "rust" 
 author: Enrico Bolzonello
+description: A deep dive into Rust closures — how they capture variables, the FnOnce/FnMut/Fn trait hierarchy, and subtle behaviors uncovered through daily Rust quizzes.
 ---
 
 Rust has unique characteristics that are easy to overlook when you come from other languages. To bridge this gap I started doing [one quiz a day](https://dtolnay.github.io/rust-quiz/), using each one as an excuse to dig deeper into the features I tend to avoid.

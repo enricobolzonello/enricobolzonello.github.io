@@ -5,7 +5,7 @@ category: ["Network Analysis"]
 client: "University"
 technologies: ["Python", "Open Street Maps", "NetworkX", "GeoPandas"]
 icon: "1F3D9"
-description: "This study explores practical solutions for urban challenges arising from long journeys and uncontrolled city growth. Inspired by the 15 Minute City idea, we focus on making essential services accessible within a 15-minute walk (or bike ride) in Padua. Using a network-based approach, we analyze the current state of the city and propose ways to expand the coverage of services within this timeframe. Our goal is to create a more convenient and sustainable urban living experience, addressing issues like traffic, air quality and time waste."
+description: "A network-based analysis of Padua applying the 15-Minute City framework, measuring how well essential services are reachable by foot or bike. Proposes targeted interventions to improve urban coverage and reduce car dependency."
 link: "https://github.com/enricobolzonello/Padua15"
 ---
 
@@ -33,10 +33,10 @@ While transportation in Padua is well-established, there is a noticeable gap in 
 
 After having selected which nodes for each community detected are the ones with highest value of closeness centrality and betweenness centrality, the analysis of coverage have been repeated but this time considering (separately) these new sets of nodes as POIs for the category they belong to and here are the results.
 
-#### Using Closeness Centrality
+### Using Closeness Centrality
 Using Closeness centrality improves the coverage of all categories by **29,57%** while also bringing down the percentage of isolated nodes by **5.72%**.
 
-#### Using Betweenness Centrality
+### Using Betweenness Centrality
 Using Betweenness centrality improves the coverage of all categories by **31.56%** while also bringing down the percentage of isolated nodes by **6.32%**. Note that betweenness performs slightly better than closeness, in particular by approximately 2% in terms of coverage.
 
 [^1]: C. Marchetti. *Anthropological invariants in travel behavior.* Technological Forecasting and Social Change, 47(1):75–88, 1994.

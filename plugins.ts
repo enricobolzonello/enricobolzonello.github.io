@@ -18,6 +18,7 @@ import katex from "lume/plugins/katex.ts";
 import icons from "lume/plugins/icons.ts";
 import inline from "lume/plugins/inline.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
+import seo from "lume/plugins/seo.ts";
 
 import "lume/types.ts";
 
@@ -55,6 +56,11 @@ export default function (userOptions?: Options) {
       .use(date(options.date))
       .use(metas())
       .use(image())
+      .use(
+        seo({
+          output: "_seo-issues.json",
+        }),
+      )
       .use(footnotes())
       .use(resolveUrls())
       .use(slugifyUrls())
