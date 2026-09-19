@@ -1,6 +1,5 @@
 import date, { Options as DateOptions } from "lume/plugins/date.ts";
 import postcss from "lume/plugins/postcss.ts";
-import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -19,11 +18,11 @@ import icons from "lume/plugins/icons.ts";
 import inline from "lume/plugins/inline.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import seo from "lume/plugins/seo.ts";
+import MarkdownItCopyCode from "npm:markdown-it-copy-code";
 
 import "lume/types.ts";
 
 export interface Options {
-  prism?: Partial<PrismOptions>;
   date?: Partial<DateOptions>;
   pagefind?: Partial<PagefindOptions>;
   feed?: Partial<FeedOptions>;
@@ -88,6 +87,7 @@ export default function (userOptions?: Options) {
 
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);
+    site.hooks.addMarkdownItPlugin(MarkdownItCopyCode)
 
     // Mastodon comment system
     site.remoteFile(
