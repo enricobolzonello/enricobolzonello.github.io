@@ -1,0 +1,12 @@
+<footer class="foot">
+    <ul role="list" class="page-social-div">
+        {{ for social of socials }}
+            <li class="page-social-item">
+                <a href="{{ social.url }}" class="page-social-link">
+                    <img class="page-social-icon" src="{{ social.icon |> icon("phosphor") }}" alt="{{ social.name }}" inline />
+                    <span>{{ social.title }}</span>
+                </a>
+            </li>
+        {{ /for }}
+    </ul>
+</footer>

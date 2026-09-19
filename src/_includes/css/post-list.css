@@ -1,10 +1,10 @@
 .postList {
-  margin-top: var(--row-gap-medium);
+  margin-top: var(--row-gap-small);
   list-style: none;
   padding: 0;
 
   & article.post + article.post {
-    margin-top: var(--row-gap-small);
+    margin-top: var(--row-gap-xsmall);
   }
   & li.post + li.post {
     margin-top: var(--row-gap-small);
@@ -22,6 +22,7 @@
     font: var(--font-title);
     letter-spacing: var(--font-title-spacing);
     display: block;
+    margin-bottom: 0rem;
 
     & a {
       text-decoration: none;

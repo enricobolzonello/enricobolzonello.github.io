@@ -6,6 +6,7 @@
 @import "css/comments.css";
 @import "css/projects.css";
 @import "css/single-project.css";
+@import "css/footer.css";
 
 @import "css/ds/main.css";
 
@@ -27,8 +28,17 @@
   --main-width: 70%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 15em;
+    padding-right: 15em;
+}
+
 /* Page layout */
 main {
+  flex: 1 0 auto;
   padding: var(--row-gap-medium) 0;
   max-width: min(100% - 15vw, 45em);
   margin: 0 auto;
@@ -45,7 +55,7 @@ main {
 
 
 /*
-The flow utility provides flow and rhythm between direct sibling elements. 
+The flow utility provides flow and rhythm between direct sibling elements.
 Where --flow-space is not defined: the default value is 1em, which equals the font size of the affected element.
 */
 .flow > * + * {

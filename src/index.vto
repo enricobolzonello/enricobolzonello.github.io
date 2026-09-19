@@ -5,27 +5,8 @@ title: Home
 description: Personal website and blog of Enrico Bolzonello, software engineer at Amazon. Writing about Rust, algorithms, productivity, and software engineering.
 ---
 
-<div class="page-header">
-  <h1 class="page-title">{{ home.welcome }}</h1>
-
-  <div class="page-subheader">
-    <p class="page-description">{{ home.description}}</p>
-
-    <div class="page-social-div">
-      {{ for social of socials}}
-        <a href="{{social.url}}">
-          <img class="page-social-icon" src="{{ social.icon |> icon("phosphor") }}" alt="{{ social.name }}" inline />
-            <span>{{ social.name }}</span>
-        </a>
-      {{ /for }}
-    </div>
-  </div>
-</div>
-
-<div class="search" id="search"></div>
-
 <section class="postList">
-  {{ for post of search.pages("type=post", "date=desc", 3) }}
+  {{ for post of search.pages("type=post", "date=desc", 10) }}
   <article class="post">
     <header class="post-header">
       <h2 class="post-title">
@@ -44,3 +25,5 @@ description: Personal website and blog of Enrico Bolzonello, software engineer a
   </article>
 {{ /for }}
 </section>
+
+<a href="/archive"> More posts →</a>

@@ -1,9 +1,5 @@
 lang: en
 
-home:
-  welcome: Hi, I'm Enrico
-  description: I am a Software engineer from Italy, currently living in Luxembourg where I work for Amazon. I (try to) maintain this blog mostly for a self-exercise
-
 menu_links: []
 extra_head: []
 
@@ -16,20 +12,26 @@ metas:
   lang: en
 
 sections:
-  - name: archive
   - name: about
   - name: projects
 
 socials:
-  - name: Github
-    url: "https://github.com/enricobolzonello"
-    icon: github-logo:bold
-  - name: Linkedin
-    url: "https://www.linkedin.com/in/enrico-bolzonello/"
-    icon: linkedin-logo:bold
+  - name: RSS
+    url: "/feed.xml"
+    title: RSS
+    icon: rss
   - name: Mail
     url: "mailto:enribolzonello@gmail.com"
-    icon: envelope:bold
+    title: contact me
+    icon: envelope
+  - name: Linkedin
+    url: "https://www.linkedin.com/in/enrico-bolzonello/"
+    title: linkedin
+    icon: linkedin-logo
+  - name: Github
+    url: "https://github.com/enricobolzonello"
+    title: enricobolzonello
+    icon: github-logo
 
 experience:
   - position: "Software Dev Engineer"
