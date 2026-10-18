@@ -1,0 +1,53 @@
+.c-knn {
+    --knn-exact: hsl(140 60% 32%);
+    --knn-approx: hsl(0 70% 48%);
+    --knn-other: var(--color-line);
+    --knn-query: hsl(210 70% 45%);
+    margin: 2rem 0;
+}
+
+[data-theme="dark"].c-knn {
+    --knn-exact: hsl(140 50% 55%);
+    --knn-approx: hsl(0 80% 65%);
+    --knn-query: hsl(210 80% 65%);
+}
+
+.c-knn__plot {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: crosshair;
+    touch-action: none;
+    background: var(--color-highlight);
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+}
+.c-knn__plot:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
+
+.c-knn__dot { fill: var(--knn-other); transition: fill var(--animation-duration);}
+.c-knn__dot.is-exact { fill: var(--knn-exact);}
+.c-knn__dot.is-approx { fill: var(--knn-approx);}
+
+.c-knn__ring { fill: none; stroke-width: 1.5; }
+.c-knn__ring--exact { stroke: var(--knn-exact); }
+.c-knn__ring--approx { stroke: var(--knn-approx); stroke-dasharray: 5 4; }
+
+.c-knn__query { fill: var(--knn-query); pointer-events: none; }
+
+.c-knn__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 0.75rem;
+    font: var(--font-small);
+}
+.c-knn__controls output { display: inline-block; min-width: 2.5ch; font-variant-numeric: tabular-nums; }
+
+.c-knn__legend { margin-top: 0.5rem; font: var(--font-small); color: var(--color-text); }
+
+@media (prefers-reduced-motion: reduce) {
+    .c-knn__dot {transition: none;}
+}

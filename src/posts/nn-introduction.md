@@ -5,6 +5,7 @@ draft: false
 author: "Enrico Bolzonello"
 tags: ["nearest neighbor", "weekly paper"]
 description: An introduction to Nearest Neighbor Search, the algorithm powering recommendation systems and vector databases, with a look at exact and approximate methods.
+templateEngine: [vto, md]
 ---
 
 Nearest Neighbor Search is an important primitive in different
@@ -88,78 +89,7 @@ Neighbors (ANN). The formal definition is:
 > d(p,q) \le (1+\epsilon)\cdot d(p^\prime,q)
 > $$
 
-<div id="knn-demo">
-  <svg id="knn-svg" viewBox="0 0 640 400" style="cursor:crosshair;display:block;max-width:100%"></svg>
-  <div style="margin-top:0.75rem;display:flex;gap:2rem;align-items:center;flex-wrap:wrap">
-    <label>ε (epsilon): <input id="eps-input" type="range" min="0" max="1" step="0.01" style="width:140px"> <span id="eps-val"></span></label>
-    <label>K: <input id="k-input" type="number" min="1" max="20" style="width:56px"></label>
-  </div>
-</div>
-
-<script type="module">
-    const N = 100;
-    const xs = Array.from({length: N}, () => Math.random() * 630 + 5);
-    const ys = Array.from({length: N}, () => Math.random() * 390 + 5);
-    
-    const svg = document.getElementById('knn-svg');
-    const NS = 'http://www.w3.org/2000/svg';
-    
-    let qx = 320, qy = 200, K = 5, eps = 0.3;
-    
-    function render() {
-    svg.innerHTML = '';
-    
-    const dists = Array.from({length: N}, (_, i) => [i, Math.hypot(xs[i] - qx, ys[i] - qy)])
-                        .sort((a, b) => a[1] - b[1]);
-    const nnSet = new Set(dists.slice(0, K).map(d => d[0]));
-    const worstD = dists[K - 1][1];
-    const annR = (1 + eps) * worstD;
-    const distMap = Object.fromEntries(dists);
-    
-    for (let i = 0; i < N; i++) {
-        const fill = nnSet.has(i) ? 'green' : (distMap[i] <= annR ? 'red' : '#aaa');
-        const c = document.createElementNS(NS, 'circle');
-        c.setAttribute('cx', xs[i]); c.setAttribute('cy', ys[i]);
-        c.setAttribute('r', 5); c.setAttribute('fill', fill);
-        svg.appendChild(c);
-    }
-    
-    for (const [r, stroke] of [[worstD, 'green'], [annR, 'red']]) {
-        const ring = document.createElementNS(NS, 'circle');
-        ring.setAttribute('cx', qx); ring.setAttribute('cy', qy); ring.setAttribute('r', r);
-        ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', stroke); ring.setAttribute('stroke-width', 1.5);
-        svg.appendChild(ring);
-    }
-    
-    const star = document.createElementNS(NS, 'circle');
-    star.setAttribute('cx', qx); star.setAttribute('cy', qy); star.setAttribute('r', 8);
-    star.setAttribute('fill', 'steelblue');
-    svg.appendChild(star);
-    }
-    
-    svg.addEventListener('click', e => {
-    const r = svg.getBoundingClientRect();
-    qx = (e.clientX - r.left) * 640 / r.width;
-    qy = (e.clientY - r.top) * 400 / r.height;
-    render();
-    });
-    
-    const epsInput = document.getElementById('eps-input');
-    epsInput.value = eps;
-    document.getElementById('eps-val').textContent = eps.toFixed(2);
-    epsInput.addEventListener('input', () => {
-    eps = parseFloat(epsInput.value);
-    document.getElementById('eps-val').textContent = eps.toFixed(2);
-    render();
-    });
-    
-    document.getElementById('k-input').addEventListener('input', e => {
-    K = Math.max(1, Math.min(20, parseInt(e.target.value) || 1));
-    render();
-    });
-    
-    render();
-</script>
+{{ comp.KnnDemo({k: 5, eps: 0.3 }) }}
 
 With this definition we don't necessarily want \\(p\\) but all the points
 inside the red circle, which we deem good enough. This definition

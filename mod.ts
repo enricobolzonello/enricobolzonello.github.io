@@ -11,6 +11,7 @@ export default function (options: Partial<Options> = {}) {
 
     // Add remote files
     const files = [
+      "_includes/css/posts/knn-demo.css",
       "_includes/css/fonts.css",
       "_includes/css/navbar.css",
       "_includes/css/page.css",
