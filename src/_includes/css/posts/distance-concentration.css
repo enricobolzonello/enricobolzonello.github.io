@@ -1,0 +1,41 @@
+.c-conc {
+    --conc-ink: var(--color-dim);
+    --conc-muted: var(--color-text);
+    --conc-accent: hsl(0 70% 48%);
+    margin: 2rem 0;
+}
+[data-theme="dark"] .c-conc { --conc-accent: hsl(0 80% 65%); }
+
+.c-conc__plots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+@media (max-width: 40rem) {
+    .c-conc__plots {grid-template-columns: 1fr;}
+}
+.c-conc__plots canvas {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--color-highlight);
+    border: 1px solid var(--color-line);
+    border-radius: var(--border-radius);
+}
+.c-conc__plot-title { margin: 0 0 0 0.25rem; font: var(--font-small-bold);}
+
+.c-conc__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 2rem;
+    margin-top: 0.75rem;
+    font: var(--font-small);
+}
+.c-conc__controls output {display: inline-block; min-width: 4ch; font-variant-numeric: tabular-nums;}
+.c-conc__modes {display: flex; flex-wrap: wrap; gap: 1rem; margin: 0; padding: 0; border: 0;}
+.c-conc__modes legend { float: left; margin-right: 0.5rem; font: var(--font-small-bold);}
+
+.c-conc__readout {margin-top: 0.5rem; font: var(--font-small); color: var(--color-text);}
+.c-conc__warn {display: none; margin-left: 0.25rem; color: var(--conc-accent); font-weight: var(--font-bold);}
+.c-conc.is-concentrated .c-conc__warn { display: inline;}

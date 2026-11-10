@@ -1,0 +1,32 @@
+{{ set id = it.id ?? "conc" }}
+<figure class="c-conc" role="group"
+        aria-label="Interactive figure: as the number of dimensions grows, the distances from a query to all points concentrate around the same value">
+    <div class="c-conc__plots">
+        <div>
+            <p class="c-conc__plot-title">Distances from one query to 500 points</p>
+            <canvas class="c-conc__hist" aria-hidden="true"></canvas>
+        </div>
+        <div>
+            <p class="c-conc__plot-title">Contrast (max - min) / min against d</p>
+            <canvas class="c-conc__curve" aria-hidden="true"></canvas>
+        </div>
+    </div>
+
+    <div class="c-conc__controls">
+        <fieldset class="c-conc__modes">
+            <legend>data</legend>
+            <label><input type="radio" name="{{ id }}-mode" value="gaussian" checked> Gaussian, no structure</label>
+            <label><input type="radio" name="{{ id }}-mode" value="subspace"> lies on a k-dim subspace</label>
+        </fieldset>
+        <label>dimensions <i>d</i> = <output class="c-conc__d-out"></output>
+            <input type="range" name="d" min="0" max="10" step="1" value="{{ it.dIndex ?? 4}}"></label>
+        <label class="c-conc__k-row" hidden>intrinsic dimension <i>k</i> = <output class="c-conc__k-out"></output>
+            <input type="range" name="k" min="1" max="10" step="1" value="{{ it.k ?? 2}}"></label>
+    </div>
+
+    <figcaption class="c-conc__readout" aria-live="polite">
+        <span class="c-conc__text"></span>
+        <span class="c-conc__warn">Nearest and farthest are almost the same distance.</span>
+    </figcaption>
+</figure>
+<script src="/js/distance-concentration.js" type="module"></script>

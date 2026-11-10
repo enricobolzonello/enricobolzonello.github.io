@@ -50,7 +50,7 @@ distance concentration, a phenomenon where in high dimensions the
 distances between all pairs of points have almost the same value. To
 illustrate the effect, consider the example in the figure below.
 
-<img src="/images/posts/2025/nn-introduction/knn_avg_dist_synt.png" alt="knn distances syntethic" style="background-color: white;">
+{{ comp.DistanceConcentration() }}
 
 As the number of dimensions increases, the relative difference between
 the closest and farthest points becomes increasingly smaller, so it is
